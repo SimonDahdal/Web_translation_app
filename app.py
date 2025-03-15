@@ -7,6 +7,7 @@ and stores the results in a database.
 from flask import Flask, request, jsonify, render_template
 from models import db, Translation
 from translation_client import translate_text
+from validators import validate_translation_request  # Import the validator
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///translations.db'
@@ -32,10 +33,13 @@ def translate():
     and returns the translated text as JSON.
     """
     data = request.get_json()
+    
+    is_valid, error_message = validate_translation_request(data)
+    if not is_valid:
+        return jsonify({'error': error_message}), 400
+
     original_text = data.get('text')
     target_language = data.get('target_language')
-    if not original_text or not target_language:
-        return jsonify({'error': 'Missing text or target language'}), 400
 
     translated_text = translate_text(original_text, target_language)
 

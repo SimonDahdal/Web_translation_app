@@ -16,3 +16,4 @@ def translate_text(text, target_language):
     else:
         # In caso di errore si restituisce un messaggio di errore.
         return f"Error: {response.status_code} {response.text}"
+    

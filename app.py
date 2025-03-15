@@ -6,9 +6,11 @@ and stores the results in a database.
 
 from flask import Flask, request, jsonify, render_template
 from models import db, Translation
+
 from translation_client import translate_text
 from validators import validate_translation_request  # Import the validator
 
+# Create the Flask application.
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///translations.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -16,7 +18,8 @@ db.init_app(app)
 
 # Create all tables once within the application context.
 with app.app_context():
-    db.create_all()
+    db.create_all() 
+
 
 @app.route('/', methods=['GET'])
 def index():
@@ -24,6 +27,7 @@ def index():
     Renders the main web page.
     """
     return render_template('index.html')
+
 
 @app.route('/translate', methods=['POST'])
 def translate():
@@ -54,5 +58,7 @@ def translate():
 
     return jsonify({'translated_text': translated_text})
 
+
 if __name__ == '__main__':
     app.run(debug=True)
+

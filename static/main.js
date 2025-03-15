@@ -1,3 +1,13 @@
+// Prompt Comment: 
+// This file handles the translation form submission. 
+// It listens for the "submit" event on the form with id "translateForm", prevents the default browser behavior,
+// collects user input for the text to translate and the target language, 
+// and sends a POST request to the '/translate' endpoint.
+// Once a JSON response is received, 
+// it displays the translated text or an error message in the element with id "result".
+// It also handles any network errors by logging them to the console.
+
+
 // Listen for the form's "submit" event
 document.getElementById('translateForm').addEventListener('submit', function(event) {
     // Prevent default form submission behavior

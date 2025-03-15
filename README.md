@@ -39,7 +39,7 @@ Web_translate_app/
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/SimonDahdal/Web_translation_app.git
    cd Web_translate_app
    ```
 2. Create a virtual environment and activate it:
@@ -73,7 +73,7 @@ Web_translate_app/
   The translations are saved using the SQLAlchemy ORM, which simplifies interactions with the SQLite database.
 
 ## License
-Specify your license here (e.g., MIT License).
+MIT License.
 
 ## Acknowledgements
 - [Flask Documentation](https://flask.palletsprojects.com/)

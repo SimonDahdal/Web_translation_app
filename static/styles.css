@@ -1,0 +1,31 @@
+body {
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    max-width: 400px;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#result {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 10px;
+    min-height: 50px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

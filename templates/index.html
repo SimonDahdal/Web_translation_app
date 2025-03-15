@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Traduzione</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>App di Traduzione</h1>
+    <form id="translateForm">
+        <textarea id="text" placeholder="Inserisci il testo qui..." required></textarea><br>
+        <select id="target_language" required>
+            <option value="" disabled selected>Seleziona lingua</option>
+            <option value="English">Inglese</option>
+            <option value="French">Francese</option>
+            <option value="German">Tedesco</option>
+            <!-- Aggiungere altre lingue se necessario -->
+        </select><br>
+        <button type="submit">Traduci</button>
+    </form>
+    <h2>Risultato:</h2>
+    <div id="result"></div>
+
+    <script src="/static/main.js"></script>
+</body>
+</html>

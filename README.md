@@ -28,12 +28,19 @@ Web_translate_app/
 ├── app.py                       # Main Flask application
 ├── translation_client.py        # Handles communication with the Ollama API
 ├── models.py                    # Database models using SQLAlchemy
-├── requirements.txt             # Project dependencies
+├── validators.py                # Input validation functions
+├── requirments.txt              # Project dependencies
 ├── templates/
 │   └── index.html               # Frontend HTML
-└── static/
-    ├── main.js                  # JavaScript for frontend logic
-    └── styles.css               # CSS for styling the application
+├── static/
+│   ├── main.js                  # JavaScript for frontend logic
+│   └── styles.css               # CSS for styling the application
+├── test/                       # Unit tests for the application
+│   ├── ollama.py
+│   ├── translation_test.py
+│   └── validators_test.py
+└── instance/
+    └── translations.db         # SQLite database for storing translation records
 ```
 
 ## Installation

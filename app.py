@@ -2,6 +2,21 @@
 Flask application serving as a simple translation service. 
 It receives text and a target language, uses an external API for translation, 
 and stores the results in a database.
+
+# Prompt Comment to generate this file:
+Create a Flask application that serves as a simple translation service.
+The application should:
+1. Render a main index page accessible via GET at '/'.
+2. Provide a '/translate' endpoint accessible via POST that:
+   a. Receives JSON data containing 'text' and 'target_language'.
+   b. Validates the input using a function 'validate_translation_request' from validators.py.
+   c. If validation fails, returns a JSON error response with HTTP status 400.
+   d. Translates the given text by calling 'translate_text' from translation_client.py.
+   e. Saves the translation record into a database using SQLAlchemy (model: Translation).
+   f. Returns the translated text as a JSON response.
+3. Configure SQLAlchemy with a SQLite database named 'translations.db'.
+4. Ensure that the database and all tables are created on application startup.
+
 """
 
 from flask import Flask, request, jsonify, render_template

@@ -42,6 +42,30 @@ Web_translate_app/
 └── instance/
     └── translations.db         # SQLite database for storing translation records
 ```
+## Ollama installation and setup
+
+1. Run the following script:
+
+    ``` bash
+    curl -fsSL https://ollama.com/install.sh | sh
+    ```
+2. Disable Ollama service
+
+    ``` bash
+    sudo systemctl disable --now ollama.service
+    ```
+
+3. Start ollama:
+
+    ``` bash
+    ollama serve
+    ```
+
+4. Pull the model:
+
+    ``` bash
+    ollama pull gemma3:1b
+    ```
 
 ## Installation
 1. Clone the repository:

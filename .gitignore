@@ -1,6 +1,6 @@
 __pycache__/
 *.pyc
-instance/
+**/instance/
 
 test/__pycache__/
 test/*.pyc

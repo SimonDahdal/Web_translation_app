@@ -75,7 +75,7 @@ Web_translate_app/
    ```
 2. Create a virtual environment and activate it:
    ```bash
-   python3 -m venv venv
+   python3 -m venv env
    source venv/bin/activate
    ```
 3. Install required dependencies:

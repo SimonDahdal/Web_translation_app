@@ -7,3 +7,4 @@ test/*.pyc
 test/instance/
 
 .pytest_cache/
+env/
